@@ -1,0 +1,27 @@
+﻿<Page x:Class="GestImmo.Views.SubView.BienSingleView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GestImmo.Views.SubView"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BienSingleView">
+
+    <Grid x:Name="ListeAffichage">
+        <Frame x:Name="FrameSingleView" Content="" Navigated="FrameSingleView_Navigated" Margin="0,0,0,96"/>
+        <ListView x:Name="ListAffichage" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="101,0,0,96" SelectionChanged="ListAffichage_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Nom :" HorizontalAlignment="Left" Margin="25,14,0,0" VerticalAlignment="Top"/>
+        <Label Content="Valeur :" HorizontalAlignment="Left" Margin="22,40,0,0" VerticalAlignment="Top"/>
+        <Label Content="Adresse :" HorizontalAlignment="Left" Margin="21,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Surface :" HorizontalAlignment="Left" Margin="19,87,0,0" VerticalAlignment="Top" Height="25"/>
+
+
+    </Grid>
+</Page>

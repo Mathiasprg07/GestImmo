@@ -1,0 +1,20 @@
+﻿GestImmo
+
+
+winexe
+C#
+.cs
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\
+GestImmo
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\App.xaml
+12-584424374
+
+29578443902
+208-678908376
+MainWindow.xaml;Views\BienView.xaml;Views\Forms\GererAppartementForm.xaml;Views\Forms\GererBienForm.xaml;Views\Forms\GererBoxForm.xaml;Views\Forms\GererMaisonForm.xaml;Views\HomeView.xaml;Views\Navigation.xaml;Views\PrestataireView.xaml;Views\PretView.xaml;Views\SubView\BienSingleView.xaml;Views\SubView\ListBienView.xaml;
+
+False
+

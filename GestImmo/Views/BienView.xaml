@@ -1,0 +1,29 @@
+﻿<Page x:Class="GestImmo.Views.BienView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GestImmo.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BienView">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame Content="Frame" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="450" VerticalAlignment="Center" Width="359"/>
+        <ListView x:Name="ListeBiens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="401" Margin="24,10,0,0" VerticalAlignment="Top" Width="252" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListeBiens_SelectionChanged" MouseDoubleClick="Double_Click" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Frame x:Name="FrameBienAjouter" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="401" Margin="464,10,0,0" VerticalAlignment="Top" Width="313"/>
+        <Button Content="Ajouter" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="45" Margin="324,165,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click"/>
+
+
+    </Grid>
+</Page>
