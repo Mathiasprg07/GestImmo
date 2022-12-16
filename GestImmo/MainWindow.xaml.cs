@@ -1,4 +1,5 @@
 ﻿using GestImmo.Views;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
+
 
 namespace GestImmo
 {
@@ -23,8 +26,15 @@ namespace GestImmo
     {
         public MainWindow()
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
             InitializeComponent();
             this.Content = new Navigation();
+
+            Log.Logger = new LoggerConfiguration()
+                .WriteTo.Console()
+                .CreateLogger();
         }
+
     }
 }

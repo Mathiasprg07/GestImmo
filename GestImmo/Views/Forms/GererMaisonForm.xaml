@@ -4,28 +4,45 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GestImmo.Views.Forms"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="GererMaison">
+      mc:Ignorable="d" d:DesignWidth="390"
+      Title="GererMaison" Height="277">
+    <Grid Margin="10,15,10,10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
 
-    <Grid>
-        <Label Content="Nom" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="39" Height="30"/>
-        <Label Content="Valeur" HorizontalAlignment="Left" Margin="5,45,0,0" VerticalAlignment="Top" Width="44" Height="30"/>
-        <Label Content="Adresse" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="58" Height="30"/>
-        <Label Content="Surface" HorizontalAlignment="Left" Margin="-2,109,0,0" VerticalAlignment="Top" Width="58" Height="30"/>
-        <TextBox x:Name="TxtMaisonNom" HorizontalAlignment="Left" Margin="58,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TxtMaisonNom_TextChanged"/>
-        <TextBox x:Name="TxtMaisonValeur" HorizontalAlignment="Left" Margin="58,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonValeur_TextChanged"/>
-        <TextBox x:Name="TxtMaisonAdresse" HorizontalAlignment="Left" Margin="58,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonAdresse_TextChanged"/>
-        <TextBox x:Name="TxtMaisonSurface" HorizontalAlignment="Left" Margin="58,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonSurface_TextChanged"/>
-        <Button x:Name="BtnAjouter" Content="Ajouter" HorizontalAlignment="Left" Margin="120,310,0,0" VerticalAlignment="Top" Width="97" Height="30" Click="BtnAjouter_Click"/>
-        <TextBox x:Name="TxtMaisonNbPieces" HorizontalAlignment="Left" Margin="58,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonNbPieces_TextChanged"/>
-        <Label Content="Nombre &#xA;de pièces" HorizontalAlignment="Left" Margin="-3,133,0,0" VerticalAlignment="Top" Width="59" Height="47"/>
-        <Label Content="Nombre de&#xD;&#xA;chambres" HorizontalAlignment="Left" Margin="-4,166,0,0" VerticalAlignment="Top" Width="83" Height="47" RenderTransformOrigin="0.47,0.298"/>
-        <TextBox x:Name="TxtMaisonNbChambres" HorizontalAlignment="Left" Margin="58,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonNbChambres_TextChanged"/>
-        <Label Content="Nombre &#xA;de caves" HorizontalAlignment="Left" Margin="-4,209,0,0" VerticalAlignment="Top" Width="83" Height="47"/>
-        <TextBox x:Name="TxtMaisonNbCaves" HorizontalAlignment="Left" Margin="58,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonNbCaves_TextChanged"/>
-        <Label Content="Nombre de&#xD;&#xA;parkings" HorizontalAlignment="Left" Margin="-4,248,0,0" VerticalAlignment="Top" Width="83" Height="47"/>
-        <TextBox x:Name="TxtMaisonNbParkings" HorizontalAlignment="Left" Margin="58,272,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextMaisonNbParkings_TextChanged"/>
-        
+        </Grid.RowDefinitions>
+
+        <Label Content="Nom" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Valeur" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Adresse" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Surface" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Nombre  de pièces" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Nombre de chambres" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Nombre de caves" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Nombre de parkings" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="TxtMaisonNom" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtMaisonValeur" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtMaisonAdresse" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtMaisonSurface" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+
+        <TextBox x:Name="TxtMaisonNbPieces" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtMaisonNbChambres" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtMaisonNbCaves" Grid.Row="6" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtMaisonNbParkings" Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <Button x:Name="btnAjouter"  Grid.Row="8" Grid.Column="1" Content="Ajouter" HorizontalAlignment="Center" VerticalAlignment="center" Click="BtnAjouter_Click"/>
+
     </Grid>
 </Page>

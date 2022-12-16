@@ -17,6 +17,8 @@ namespace GestImmo.DATA.Models
 
         public Bien Bien { get; set; }
 
+        public static DateTime dateBailEnCours = new DateTime(2000, 1, 1);
+
         public Bail()
         {
 
@@ -29,6 +31,7 @@ namespace GestImmo.DATA.Models
             DateFin = dateFin;
             Locataires = new List<Locataire>();
         }
+
     }
 }
 

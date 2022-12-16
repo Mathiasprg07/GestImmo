@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yFR1hsmCKriKTaas8sDAUyjCOQpbLFz6x+QXqHZD7YeCFN/YBRKswwzrLQd6rxDjTKz1hDPsaXDJoDptqen2FA==",
+  "dgSpecHash": "UGhKoRxgPHwvRTxhHlkhxiMjnjoq6TasuWu+TQxrJ8p9BQGGZR6ltaXBBpzzgYqMan80h88EtpQv9BzXeOH7iw==",
   "success": true,
   "projectFilePath": "C:\\BTS\\2e annee\\slam\\WPF\\GestImmo\\GestImmo\\GestImmo.csproj",
   "expectedPackageFiles": [
@@ -24,6 +24,9 @@
     "C:\\Users\\parag\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\parag\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
     "C:\\Users\\parag\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.0\\npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512",
+    "C:\\Users\\parag\\.nuget\\packages\\serilog\\2.12.0\\serilog.2.12.0.nupkg.sha512",
+    "C:\\Users\\parag\\.nuget\\packages\\serilog.sinks.console\\4.1.0\\serilog.sinks.console.4.1.0.nupkg.sha512",
+    "C:\\Users\\parag\\.nuget\\packages\\serilog.sinks.file\\5.0.0\\serilog.sinks.file.5.0.0.nupkg.sha512",
     "C:\\Users\\parag\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\parag\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\parag\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",

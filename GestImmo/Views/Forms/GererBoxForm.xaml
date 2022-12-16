@@ -8,16 +8,30 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="GererBoxForm">
 
-    <Grid>
-        <Label Content="Nom" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="39" Height="30"/>
-        <Label Content="Valeur" HorizontalAlignment="Left" Margin="5,45,0,0" VerticalAlignment="Top" Width="44" Height="30"/>
-        <Label Content="Adresse" HorizontalAlignment="Left" Margin="0,80,0,0" VerticalAlignment="Top" Width="58" Height="30"/>
-        <Label Content="Surface" HorizontalAlignment="Left" Margin="-2,109,0,0" VerticalAlignment="Top" Width="58" Height="30"/>
-        <TextBox x:Name="TxtBoxNom" HorizontalAlignment="Left" Margin="49,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextBoxNom_TextChanged"/>
-        <TextBox x:Name="TxtBoxValeur" HorizontalAlignment="Left" Margin="49,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextBoxValeur_TextChanged"/>
-        <TextBox x:Name="TxtBoxAdresse" HorizontalAlignment="Left" Margin="49,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextBoxAdresse_TextChanged"/>
-        <TextBox x:Name="TxtBoxSurface" HorizontalAlignment="Left" Margin="49,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextBoxSurface_TextChanged"/>
-        <Button x:Name="BtnAjouter" Content="Ajouter" HorizontalAlignment="Left" Margin="49,144,0,0" VerticalAlignment="Top" Width="97" Height="30" Click="BtnAjouter_Click"/>
+    <Grid Margin="15,15,15,15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Label Content="Nom" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Valeur" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Adresse" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+        <Label Content="Surface" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtBoxNom" Grid.Row="0" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtBoxValeur" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtBoxAdresse" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <TextBox x:Name="TxtBoxSurface" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Center"/>
+        <Button x:Name="btnAjouter"  Grid.Row="4" Grid.Column="1" Content="Ajouter" HorizontalAlignment="Center" VerticalAlignment="center" Click="BtnAjouter_Click"/>
+        
+        
 
 
     </Grid>
