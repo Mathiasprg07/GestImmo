@@ -14,7 +14,6 @@ namespace GestImmo.DATA.Models
 
         public DateTime dateDebut { get; set; }
 
-        public Bien Bien { get; set; }
         public Pret()
         {
 

@@ -212,3 +212,6 @@ C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Mono.TextTem
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\System.Text.Encodings.Web.dll
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\System.Text.Json.dll
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Serilog.dll
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Serilog.Sinks.Console.dll
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Serilog.Sinks.File.dll
