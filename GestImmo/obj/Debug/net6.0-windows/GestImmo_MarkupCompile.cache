@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\App.xaml
-12-584424374
+161985305933
 
-301886267843
+35-1654306076
 211315895699
-MainWindow.xaml;Views\BienView.xaml;Views\Forms\GererAppartementForm.xaml;Views\Forms\GererBienForm.xaml;Views\Forms\GererBoxForm.xaml;Views\Forms\GererMaisonForm.xaml;Views\HomeView.xaml;Views\Navigation.xaml;Views\PrestataireView.xaml;Views\PretView.xaml;Views\SubView\BienSingleView.xaml;Views\SubView\ListBienView.xaml;
+MainWindow.xaml;Views\AppartementDetailView.xaml;Views\BienDetailView.xaml;Views\BienView.xaml;Views\BoxDetailView.xaml;Views\Forms\GererAppartementForm.xaml;Views\Forms\GererBienForm.xaml;Views\Forms\GererBoxForm.xaml;Views\Forms\GererMaisonForm.xaml;Views\HomeView.xaml;Views\MaisonDetailView.xaml;Views\Navigation.xaml;Views\PrestataireView.xaml;Views\PretView.xaml;Views\SubView\BienSingleView.xaml;Views\SubView\ListBienView.xaml;
 
 False
 

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using GestImmo.Views.Forms;
 using GestImmo.DATA.Models;
+using GestImmo.Views.Tools;
 
 namespace GestImmo.Views.Forms
 {
@@ -22,25 +23,64 @@ namespace GestImmo.Views.Forms
     /// </summary>
     public partial class GererBienForm : Page
     {
-        public GererBienForm()
-        {
-            InitializeComponent();
-        }
+        private IObserver obs;
+
         private void TypeBien_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (TypeBien.SelectedIndex == 0)
             {
-                this.FrameAfficheForm.Navigate(new GererBoxForm());
+                initAjouterBox();
             }
             if (TypeBien.SelectedIndex == 1)
             {
-                this.FrameAfficheForm.Navigate(new GererMaison());
+                initAjouterMaison();
             }
             if (TypeBien.SelectedIndex == 2)
             {
-                this.FrameAfficheForm.Navigate(new GererAppartement());
-            }
+                initAjouterAppart();            }
         }
+        public GererBienForm(IObserver obs)
+        {
+            InitializeComponent();
+            this.obs = obs;
+        }
+
+        private void initAjouterBox()
+        {
+            GererBoxForm boxForm = new GererBoxForm();
+
+            if (this.obs != null)
+            {
+                boxForm.Observers.Add(this.obs);
+            }
+            this.FrameAfficheForm.Navigate(boxForm);
+
+        }
+
+        private void initAjouterMaison()
+        {
+            GererMaison maisonForm = new GererMaison();
+
+            if (this.obs != null)
+            {
+                maisonForm.Observers.Add(this.obs);
+            }
+            this.FrameAfficheForm.Navigate(maisonForm);
+
+        }
+
+        private void initAjouterAppart()
+        {
+            GererAppartement appartementForm = new GererAppartement();
+
+            if (this.obs != null)
+            {
+                appartementForm.Observers.Add(this.obs);
+            }
+            this.FrameAfficheForm.Navigate(appartementForm);
+
+        }
+
 
         private void FrameAfficheForm_Navigated(object sender, NavigationEventArgs e)
         {

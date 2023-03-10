@@ -25,53 +25,28 @@ namespace GestImmo.Views
     public partial class BienView : Page
     {
         GestImmoContext gestImmocontext = GestImmoContext.getInstance();
-
+        ListBienView bienView;
+        
         public BienView()
         {
             InitializeComponent();
+            bienView = new ListBienView(FrameBienAjouter);
+            this.FrameBienListe.Navigate(bienView);
+            this.FrameBienAjouter.Navigate(new GererBienForm(this.bienView));
 
-            //Bien box = new Box("test", 20, "adresse", 20);
-            //gestImmocontext.Biens.Add(box);
-            //gestImmocontext.SaveChanges();
-            foreach (Bien item in gestImmocontext.Biens)
-            {
-                this.ListeBiens.Items.Add(item.Nom);
-            }
+
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            this.FrameBienAjouter.Navigate(new GererBienForm());
-        }
         private void ListeBien1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
-        }
-        private void Double_Click(object sender, MouseButtonEventArgs e)
-        {
-            BienSingleView objetBien = new BienSingleView();
-            this.FrameBienAjouter.Navigate(objetBien);
-            string variable = (string)ListeBiens.SelectedItems[0];
-
-            foreach (Bien bien in gestImmocontext.Biens)
-            {
-                if (bien.Nom == variable)
-                {
-
-                    objetBien.ListAffichage.Items.Add(bien.Nom);
-                    objetBien.ListAffichage.Items.Add(bien.Valeur);
-                    objetBien.ListAffichage.Items.Add(bien.Adresse);
-                    objetBien.ListAffichage.Items.Add(bien.Surface);
-
-
-                }
-            }
         }
 
         private void ListeBiens_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
+
     }
 }
 

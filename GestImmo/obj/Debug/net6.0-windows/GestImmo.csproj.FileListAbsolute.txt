@@ -215,3 +215,11 @@ C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\runtimes\bro
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Serilog.dll
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Serilog.Sinks.Console.dll
 C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\bin\Debug\net6.0-windows\Serilog.Sinks.File.dll
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\AppartementDetailView.g.cs
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\BienDetailView.g.cs
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\BoxDetailView.g.cs
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\MaisonDetailView.g.cs
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\AppartementDetailView.baml
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\BienDetailView.baml
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\BoxDetailView.baml
+C:\BTS\2e annee\slam\WPF\GestImmo\GestImmo\obj\Debug\net6.0-windows\Views\MaisonDetailView.baml

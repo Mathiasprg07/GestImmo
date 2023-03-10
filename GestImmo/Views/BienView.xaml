@@ -13,16 +13,8 @@
             <ColumnDefinition Width="0*"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Frame Content="Frame" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="450" VerticalAlignment="Center" Width="359"/>
-        <ListView x:Name="ListeBiens" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="680" Margin="24,0,0,0" VerticalAlignment="Center" Width="350" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListeBiens_SelectionChanged" MouseDoubleClick="Double_Click" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Frame x:Name="FrameBienAjouter" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="690" Margin="500,0,0,0" VerticalAlignment="Top" Width="460"/>
-        <Button Content="Ajouter" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="44" Margin="381,166,0,0" VerticalAlignment="Top" Width="95" Click="Button_Click"/>
+        <Frame x:Name="FrameBienListe" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="646" VerticalAlignment="Center" Width="385" Margin="10,0,0,0"/>
+        <Frame x:Name="FrameBienAjouter" Content="" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="680" Margin="400,0,0,0" VerticalAlignment="Center" Width="600"/>
 
 
     </Grid>

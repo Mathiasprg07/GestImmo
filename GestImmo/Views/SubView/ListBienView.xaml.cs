@@ -24,10 +24,15 @@ namespace GestImmo.Views.SubView
     public partial class ListBienView : Page, IObserver
     {
         GestImmoContext gestImmocontext = GestImmoContext.getInstance();
+        Frame frame;
+      
 
-        public ListBienView()
+
+        public ListBienView(Frame frame)
         {
             InitializeComponent();
+            this.refreshList();
+            this.frame = frame;
 
         }
         
@@ -39,7 +44,7 @@ namespace GestImmo.Views.SubView
 
             foreach (Bien bien in ctx.Biens)
             {
-                this.ListeBien.Items.Add(bien.Nom);
+                this.ListeBien.Items.Add(bien);
             }
         }
        
@@ -47,14 +52,26 @@ namespace GestImmo.Views.SubView
         {
             this.refreshList();
         }
-        
-
-        private void ListeBien_SelectionChanged(object sender, SelectionChangedEventArgs e)
+       
+        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MessageBox.Show("Bien joué");
-
-
 
         }
+        private void Double_Click(object sender, MouseButtonEventArgs e)
+        {
+            
+            Bien theBien = (Bien)(sender as ListBox).SelectedItem;
+
+            BienDetailView bienDetailView = new BienDetailView(theBien.BienId);
+            this.frame.Navigate(bienDetailView);
+
+            /*
+            BoxAfficherDetail boxAfficherDetail = new BoxAfficherDetail(theBien);
+            boxAfficherDetail.ListObservers.Add(this);
+            */
+           
+        }
+
+
     }
 }

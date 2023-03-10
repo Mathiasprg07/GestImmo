@@ -14,73 +14,22 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ConsoleApp.PostgreSQL;
 using GestImmo.DATA.Models;
-
-
+using GestImmo.Views.Tools;
 
 namespace GestImmo.Views.Forms
 {
     /// <summary>
     /// Logique d'interaction pour GererAppartement.xaml
     /// </summary>
-    public partial class GererAppartement : Page
+    public partial class GererAppartement : Page , IObservable
+
     {
         GestImmoContext cxt = GestImmoContext.getInstance();
+        public List<IObserver> Observers { get; set; }
         public GererAppartement()
         {
             InitializeComponent();
-        }
-        private void TxtAppartementNom_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementValeur_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementAdresse_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementSurface_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementNbPieces_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementNbChambres_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementNbCaves_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementNbParkings_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementEtages_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementAscenseur_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextAppartementChauffCommun_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            Observers = new List<IObserver>();
 
         }
 
@@ -88,10 +37,6 @@ namespace GestImmo.Views.Forms
         private void BtnAjouter_Click(object sender, RoutedEventArgs e)
         {
             bool verif = true;
-            if (ComboBoxChauffCommun.SelectedIndex == 0)
-            {
-                verif = true;
-            }
             if (ComboBoxChauffCommun.SelectedIndex == 1)
             {
                 verif = false;
@@ -106,10 +51,23 @@ namespace GestImmo.Views.Forms
             Bien appart = new Appartement(TxtAppartementNom.Text, int.Parse(TxtAppartementValeur.Text), TxtAppartementAdresse.Text, int.Parse(TxtAppartementSurface.Text), int.Parse(TxtAppartementNbPieces.Text), int.Parse(TxtAppartementNbChambres.Text), int.Parse(TxtAppartementNbCaves.Text), int.Parse(TxtAppartementNbParkings.Text), int.Parse(TxtAppartementEtages.Text),verif2, verif);
             cxt.Biens.Add(appart);
             cxt.SaveChanges();
+            this.notifyObservers();
+
+
+        }
+        void notifyObservers()
+        {
+            foreach (IObserver obs in Observers)
+            {
+                obs.update();
+            }
+        }
+        private void ComboBoxChauffCommun_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
 
         }
 
-        private void ComboBoxChauffCommun_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void TxtAppartementEtages_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

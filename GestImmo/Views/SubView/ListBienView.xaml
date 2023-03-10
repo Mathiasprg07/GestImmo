@@ -9,10 +9,12 @@
       Title="ListBienView">
 
     <Grid>
-        <ListView x:Name="ListeBien" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="ListeBien_SelectionChanged">
+        <ListView x:Name="ListeBien" SelectionChanged="ListView_SelectionChanged" MouseDoubleClick="Double_Click" >
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Nom}" Header="Nom" Width="125"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Surface}" Header="Surface" Width="125"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding Path=Valeur}" Header="Valeur" Width="125"/>
                 </GridView>
             </ListView.View>
         </ListView>

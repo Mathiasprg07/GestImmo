@@ -5,40 +5,61 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GestImmo.Views.Forms"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="GererAppartement">
+            d:DesignHeight="500" d:DesignWidth="550"
+      Title="GererAppartement" Width="500" Height="500">
 
     <Grid>
-        <Label Content="Nom" HorizontalAlignment="Left" Margin="8,-2,0,0" VerticalAlignment="Top" Width="40" Height="30" RenderTransformOrigin="0.487,0.453"/>
-        <Label Content="Valeur" HorizontalAlignment="Left" Margin="6,17,0,0" VerticalAlignment="Top" Width="44" Height="30"/>
-        <Label Content="Adresse" HorizontalAlignment="Left" Margin="2,37,0,0" VerticalAlignment="Top" Width="58" Height="30"/>
-        <Label Content="Surface" HorizontalAlignment="Left" Margin="0,63,0,0" VerticalAlignment="Top" Width="58" Height="30"/>
-        <TextBox x:Name="TxtAppartementNom" HorizontalAlignment="Left" Margin="58,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" TextChanged="TxtAppartementNom_TextChanged"/>
-        <TextBox x:Name="TxtAppartementValeur" HorizontalAlignment="Left" Margin="59,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" TextChanged="TextAppartementValeur_TextChanged"/>
-        <TextBox x:Name="TxtAppartementAdresse" HorizontalAlignment="Left" Margin="60,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextAppartementAdresse_TextChanged"/>
-        <TextBox x:Name="TxtAppartementSurface" HorizontalAlignment="Left" Margin="60,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="220" TextChanged="TextAppartementSurface_TextChanged"/>
-        <Button x:Name="BtnAjouter" Content="Ajouter" HorizontalAlignment="Left" Margin="111,287,0,0" VerticalAlignment="Top" Width="96" Height="30" Click="BtnAjouter_Click"/>
-        <TextBox x:Name="TxtAppartementNbPieces" HorizontalAlignment="Left" Margin="60,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="222" TextChanged="TextAppartementNbPieces_TextChanged"/>
-        <Label Content="Nombre &#xA;de pièces" HorizontalAlignment="Left" Margin="-3,78,0,0" VerticalAlignment="Top" Width="60" Height="47"/>
-        <Label Content="Nombre &#xA;chambres" HorizontalAlignment="Left" Margin="-1,111,0,0" VerticalAlignment="Top" Width="83" Height="47"/>
-        <TextBox x:Name="TxtAppartementNbChambres" HorizontalAlignment="Left" Margin="61,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextAppartementNbChambres_TextChanged"/>
-        <Label Content="Nombre &#xA;de caves" HorizontalAlignment="Left" Margin="-3,144,0,0" VerticalAlignment="Top" Width="83" Height="47"/>
-        <TextBox x:Name="TxtAppartementNbCaves" HorizontalAlignment="Left" Margin="61,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextAppartementNbCaves_TextChanged"/>
-        <Label Content="Nombre &#xA;de parkings" HorizontalAlignment="Left" Margin="-3,175,0,0" VerticalAlignment="Top" Width="83" Height="47"/>
-        <TextBox x:Name="TxtAppartementNbParkings" HorizontalAlignment="Left" Margin="61,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextAppartementNbParkings_TextChanged"/>
-        <Label Content="Etages" HorizontalAlignment="Left" VerticalAlignment="Top" Width="58" Height="30" Margin="-1,212,0,0"/>
-        <TextBox x:Name="TxtAppartementEtages" HorizontalAlignment="Left" Margin="61,212,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="221" TextChanged="TextAppartementEtages_TextChanged"/>
-        <Label Content="Ascenseur" HorizontalAlignment="Left" Margin="-6,235,0,0" VerticalAlignment="Top" Width="70" Height="29"/>
-        <Label Content="Chauffage &#xD;&#xA;commun" HorizontalAlignment="Left" Margin="-4,248,0,0" VerticalAlignment="Top" Width="70" Height="43" RenderTransformOrigin="0.459,0.502"/>
-        <ComboBox x:Name="ComboBoxChauffCommun" HorizontalAlignment="Left" Margin="61,260,0,0" VerticalAlignment="Top" Width="196" SelectionChanged="ComboBoxChauffCommun_SelectionChanged">
-            <ComboBoxItem Content="oui"/>
-            <ComboBoxItem Content="non"/>
-        </ComboBox>
-        <ComboBox x:Name="ComboBoxAscenceurCommun" HorizontalAlignment="Left" Height="15" Margin="61,238,0,0" VerticalAlignment="Top" Width="230" SelectionChanged="ComboBoxChauffCommun_SelectionChanged">
-            <ComboBoxItem Content="oui"/>
-            <ComboBoxItem Content="non"/>
-        </ComboBox>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="4*"/>
 
+
+        </Grid.RowDefinitions>
+
+        <Label Content="Nom&#xD;&#xA;" Grid.Column="0" VerticalAlignment="Center" Height="26"/>
+        <Label Content="Valeur&#xD;&#xA;" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Height="26"/>
+        <Label Content="Adresse&#xD;&#xA;" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Height="26"/>
+        <Label Content="Surface&#xD;&#xA;" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" Height="26"/>
+        <TextBox x:Name="TxtAppartementNom" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18" />
+        <TextBox x:Name="TxtAppartementValeur" Grid.Row="1" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" />
+        <TextBox x:Name="TxtAppartementAdresse" Grid.Row="2" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
+        <TextBox x:Name="TxtAppartementSurface" Grid.Row="3" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
+
+        <TextBox x:Name="TxtAppartementNbPieces" Grid.Row="4" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
+        <Label Content="Nombre &#xA;de pièces" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" Height="42"/>
+        <Label Content="Nombre &#xA;chambres" Grid.Row="5" Grid.Column="0" VerticalAlignment="Center" Height="42"/>
+        <TextBox x:Name="TxtAppartementNbChambres" Grid.Row="5" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
+        <Label Content="Nombre &#xA;de caves" Grid.Row="6" Grid.Column="0" VerticalAlignment="Center" Height="42"/>
+        <TextBox x:Name="TxtAppartementNbCaves" Grid.Row="6" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18"/>
+        <Label Content="Nombre &#xA;de parkings" Grid.Row="7" Grid.Column="0" VerticalAlignment="Center" Height="42"/>
+        <TextBox x:Name="TxtAppartementNbParkings" Grid.Row="7" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18" />
+        <Label Content="Etages&#xD;&#xA;" Grid.Row="8" Grid.Column="0" VerticalAlignment="Center" Height="26"/>
+        <TextBox x:Name="TxtAppartementEtages" Grid.Row="8" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Center" Height="18" TextChanged="TxtAppartementEtages_TextChanged"/>
+        <Label Content="Ascenseur&#xD;&#xA;" Grid.Row="9" Grid.Column="0" VerticalAlignment="Center" Height="26"/>
+        <Label Content="Chauffage &#xD;&#xA;commun" Grid.Row="10" Grid.Column="0" VerticalAlignment="Center" Height="42"/>
+        <ComboBox x:Name="ComboBoxChauffCommun" Grid.Row="9" Grid.Column="1" Text="TextBox" VerticalAlignment="Center" SelectionChanged="ComboBoxChauffCommun_SelectionChanged" Height="18">
+            <ComboBoxItem Content="oui"/>
+            <ComboBoxItem Content="non"/>
+        </ComboBox>
+        <ComboBox x:Name="ComboBoxAscenceurCommun" Grid.Row="10" Grid.Column="1" Text="TextBox" VerticalAlignment="Center" SelectionChanged="ComboBoxChauffCommun_SelectionChanged" Height="18">
+            <ComboBoxItem Content="oui"/>
+            <ComboBoxItem Content="non"/>
+        </ComboBox>
+        <Button x:Name="btnAjouter"  Grid.Row="12" Grid.Column="1" Content="Ajouter" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BtnAjouter_Click" Width="76" Height="20"/>
 
     </Grid>
 </Page>

@@ -14,56 +14,21 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ConsoleApp.PostgreSQL;
 using GestImmo.DATA.Models;
+using GestImmo.Views.Tools;
 
 namespace GestImmo.Views.Forms
 {
     /// <summary>
     /// Logique d'interaction pour GererMaison.xaml
     /// </summary>
-    public partial class GererMaison : Page
+    public partial class GererMaison : Page, IObservable
     {
         GestImmoContext ctx = GestImmoContext.getInstance();
+        public List<IObserver> Observers { get; set; }
         public GererMaison()
         {
             InitializeComponent();
-        }
-        private void TxtMaisonNom_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonValeur_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonAdresse_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonSurface_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonNbPieces_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonNbChambres_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonNbCaves_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextMaisonNbParkings_TextChanged(object sender, TextChangedEventArgs e)
-        {
+            Observers = new List<IObserver>();
 
         }
 
@@ -72,6 +37,16 @@ namespace GestImmo.Views.Forms
             Bien maison = new Maison(TxtMaisonNom.Text, int.Parse(TxtMaisonValeur.Text), TxtMaisonAdresse.Text, int.Parse(TxtMaisonSurface.Text), int.Parse(TxtMaisonNbPieces.Text), int.Parse(TxtMaisonNbChambres.Text), int.Parse(TxtMaisonNbCaves.Text), int.Parse(TxtMaisonNbParkings.Text));
             ctx.Biens.Add(maison);
             ctx.SaveChanges();
+            this.notifyObservers();
+
+        }
+
+        void notifyObservers()
+        {
+            foreach (IObserver obs in Observers)
+            {
+                obs.update();
+            }
         }
     }
 }

@@ -17,7 +17,11 @@ namespace ConsoleApp.PostgreSQL
         public DbSet<Prestataire> Prestataires { get; set; }
         public DbSet<Intervention> Interventions { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Host=localhost;Database=gestimmo2;Username=postgres;Password=admin123");
+
+        { optionsBuilder.UseNpgsql("Host=localhost;Database=gestimmo2;Username=postgres;Password=admin123");
+
+            var value = System.Environment.GetEnvironmentVariable("OnConfiguring");
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

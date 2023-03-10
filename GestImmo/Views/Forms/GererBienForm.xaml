@@ -5,26 +5,27 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:GestImmo.Views.Forms"
       mc:Ignorable="d" 
-      d:DesignHeight="690" d:DesignWidth="460"
+      d:DesignHeight="700" d:DesignWidth="600"
       Title="GererBienForm">
-    <Grid Margin="15,15,15,15">
+    <Grid Margin="0,15,15,15">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="245.182"></ColumnDefinition>
+            <ColumnDefinition Width="254.818"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition ></RowDefinition>
             <RowDefinition Height="600"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <ComboBox x:Name="TypeBien" HorizontalAlignment="Left" Margin="186,0,0,0" VerticalAlignment="Center" Width="221" SelectionChanged="TypeBien_SelectionChanged">
+        <ComboBox x:Name="TypeBien" HorizontalAlignment="Left" Margin="186,0,0,0" VerticalAlignment="Center" Width="297" SelectionChanged="TypeBien_SelectionChanged" Grid.ColumnSpan="2">
 
             <ComboBoxItem Content="Box"/>
             <ComboBoxItem Content="Maison"/>
             <ComboBoxItem Content="Appartement"/>
 
         </ComboBox>
-        <Label Content="Type de Bien" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top" Width="88" Height="33"/>
-        <Frame x:Name="FrameAfficheForm" Margin="10,70,93,0" Grid.RowSpan="2"/>
+        <Label Content="Type de Bien" HorizontalAlignment="Left" Margin="35,17,0,0" VerticalAlignment="Top" Width="88" Height="33"/>
+        <Frame x:Name="FrameAfficheForm" Margin="10,10,-57,0" Grid.ColumnSpan="2" Grid.Row="1"/>
 
 
     </Grid>

@@ -25,12 +25,12 @@ namespace GestImmo.Views.Forms
     {
         GestImmoContext context = GestImmoContext.getInstance();
 
-        public List<IObserver> Observers { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
         public GererBoxForm()
         {
             InitializeComponent();
+            Observers = new List<IObserver>();
         }
+        public List<IObserver> Observers { get; set; }
         private void BtnAjouter_Click(object sender, RoutedEventArgs e)
         {
             Bien bien = new Box(TxtBoxNom.Text, int.Parse(TxtBoxValeur.Text), TxtBoxAdresse.Text, int.Parse(TxtBoxSurface.Text));
@@ -45,27 +45,6 @@ namespace GestImmo.Views.Forms
                 obs.update();
             }
         }
-        private void TextBoxNom_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxValeur_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxAdresse_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBoxSurface_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-
-
+       
     }
 }
